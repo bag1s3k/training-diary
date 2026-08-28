@@ -1,0 +1,21 @@
+[project]
+name = "training-diary"
+version = "0.1.0"
+description = "A web app to track and analyze trainings"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "bag1s3k", email = "174890936+bag1s3k@users.noreply.github.com" },
+]
+requires-python = ">=3.13"
+dependencies = ["polars>=1.44.1", "seaborn>=0.13.2"]
+
+[project.scripts]
+training-diary = "training_diary:main"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["jupyterlab>=4.6.3", "jupyterlab-wakatime>=0.2.0"]
